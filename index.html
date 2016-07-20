@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8"/>
+<script src="angular.min.js"></script>
+<title>İşaret Dili - Angular</title>
+<style>
+  li { float:left; list-style:none; }
+  img { border:1px solid #eee;}
+</style>
+</head>
+<div ng-app="ngUygulamam" ng-controller="ngKontrol">
+  İşaret dili ile göstermek istediğiniz içeriği giriniz;<br>
+  <input type="text" size="50" ng-model="cumle"/>
+
+  <div class="gosterim">
+    <li ng-repeat="harf in cumle track by $index">
+     <img src="{{ imgRoot + escHarf(harf)}}.gif"/>
+    </li>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
