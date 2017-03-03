@@ -4,8 +4,13 @@
 <script src="angular.min.js"></script>
 <title>İşaret Dili - Angular</title>
 <style>
-  li { float:left; list-style:none; }
+  li { float:left; list-style:none; position:relative; }
   img { border:1px solid #eee;}
+  .harf {
+    position: absolute;
+    bottom: -15px;
+    left: 55px;
+  }
 </style>
 </head>
 <div ng-app="ngUygulamam" ng-controller="ngKontrol">
@@ -13,9 +18,10 @@
   <input type="text" size="50" ng-model="cumle"/>
 
   <div class="gosterim">
-    <div ng-repeat="kelime in cumle.split(' ') track by $index" style="display:block; height: 100px">
+    <div ng-repeat="kelime in cumle.split(' ') track by $index" style="display:block; height: 130px">
       <li ng-repeat="harf in kelime track by $index">
         <img src="{{ imgRoot + escHarf(harf)}}.gif"/>
+        <div class="harf">{{escHarf(harf)}}</div>
       </li>
     </div>
   </div>
