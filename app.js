@@ -36,6 +36,9 @@ var uygulama = angular.module("ngUygulamam", []);
     case "İ":
         return "i";
         break;
+    case " ":
+        return "x";
+        break;
     default:
         return hrf.toLowerCase();
     }

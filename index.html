@@ -13,9 +13,11 @@
   <input type="text" size="50" ng-model="cumle"/>
 
   <div class="gosterim">
-    <li ng-repeat="harf in cumle track by $index">
-     <img src="{{ imgRoot + escHarf(harf)}}.gif"/>
-    </li>
+    <div ng-repeat="kelime in cumle.split(' ') track by $index" style="display:block; height: 100px">
+      <li ng-repeat="harf in kelime track by $index">
+        <img src="{{ imgRoot + escHarf(harf)}}.gif"/>
+      </li>
+    </div>
   </div>
 </div>
 <script src="app.js"></script>
