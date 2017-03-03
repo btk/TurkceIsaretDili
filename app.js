@@ -23,7 +23,7 @@ var uygulama = angular.module("ngUygulamam", []);
         break;
     case "ö":
     case "Ö":
-        return "öt";
+        return "ot";
         break;
     case "ü":
     case "Ü":
